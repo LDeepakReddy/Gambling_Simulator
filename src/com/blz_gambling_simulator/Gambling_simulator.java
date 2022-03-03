@@ -11,9 +11,11 @@ public class Gambling_simulator {
     public static final int STAKES_PER_DAY = 50;
 
     public static void main(String[] args) {
+
         int totalCash = DAY_STAKE;
         int totalDollars = START_DOLLARS;
         int days = 1;
+
 
         for (days = 1; days <= MAXIMUM_DAY; days++) {
             while (totalCash < WINNING_MARGIN && totalCash > LOSING_MARGIN) {
@@ -32,10 +34,14 @@ public class Gambling_simulator {
                 System.out.println("Gambler lost " + totalDollars + "on Day " + days);
             }
         }
-        if (totalDollars > START_DOLLARS) {
+        if (totalDollars >= START_DOLLARS) {
             System.out.println("Gambler won " + totalDollars);
+            System.out.println("Want to play again or Stop playing");
+
         } else {
             System.out.println("Gambler lost " + totalDollars);
+
+            System.out.println("Would like to stop Gambling or play again");
         }
     }
 }
